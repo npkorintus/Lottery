@@ -14,8 +14,8 @@ public class Lottery
 {
 	public static void main (String[] args) throws IOException
 	{
-		int [] lotteryNumbers = new int [5];
-		int [] user = new int [5];
+		int [] lotteryNumbers = new int [7];
+		int [] user = new int [7];
 		int i;
 		boolean winner = true;
 
@@ -24,16 +24,16 @@ public class Lottery
 
 
 		// For loop to generate random lottery numbers
-		for (i = 0; i < 5; i++)
+		for (i = 0; i < 7; i++)
 		{
 			lotteryNumbers[i] = randomNumber.nextInt(10);
 		}
 
 
 		// Ask user to enter their lottery picks
-		System.out.print("\nEnter your five lottery picks (0-9) with a space in between each number:");
+		System.out.print("\nEnter your seven lottery picks (0-9) with a space in between each number:");
 
-		for (i = 0; i < 5; i++)
+		for (i = 0; i < 7; i++)
 		{
 			user[i] = keyboard.nextInt();
 		}
@@ -41,7 +41,7 @@ public class Lottery
 
 		// Display matching numbers
 		System.out.print("Matching numbers: ");
-		for (i = 0; i < 5; i++)
+		for (i = 0; i < 7; i++)
 		{
 			if (lotteryNumbers [i] == user [i])
 				System.out.print(user[i] + " ");
@@ -50,7 +50,7 @@ public class Lottery
 		System.out.println();
 		System.out.print("The winning numbers are: ");
 
-		for (i = 0; i < 5; i++)
+		for (i = 0; i < 7; i++)
 		{
 			System.out.print(lotteryNumbers[i] + " ");
 		}
